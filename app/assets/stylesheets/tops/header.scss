@@ -1,0 +1,118 @@
+.header{
+  height:80px;
+  background-color: #4267B2;
+  padding-top: 5px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+  // position: fixed;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  &__logo{
+    height: 70px;
+    width: 120px;
+    background-color: #FFFFFF;
+    margin: 0px 20px 5px 20px;
+    border-radius: 15px;
+    padding: 3px;
+    &--logobox{
+      background-color: #4267B2;
+      border-radius: 13px;
+      height: 64px;
+      width: 114px;
+      padding: 3px;
+      &--box{
+        background-color: #FFFFFF;
+        height: 58px;
+        width: 108px;
+        border-radius: 10px;
+        display:flex;
+        // padding-top: 3px;
+        // padding-left:3px;
+        &--text{
+          font-weight: bold;
+          font-size:70px;
+          height: 50px;
+          width: 45px;
+          color: #4267B2;
+          display:inline-block;
+        }
+        &--text2{
+          font-weight: bold;
+          font-size:58px;
+          display:inline-block;
+          width: 60px;
+          color: #4267B2;
+          letter-spacing: -5px;
+        }
+      }
+    }
+  }
+  &__title{
+    font-weight: bold;
+    font-size:50px;
+    color:#ffffff;
+    margin-top:10px; 
+    display: inline-block;
+    // margin-bottom: auto;
+  }
+  &__username{
+    position: absolute;
+    top: 30px;
+    right: 320px;
+    display: inline-block;
+    font-weight: bold;
+    font-size:30px;
+    // color: #4267B2;
+    color:#000;
+    margin-left:100px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    height: 30px;
+    // width: 150px;
+  }
+  &__foreachpoducts{
+    position: absolute;
+    top: 30px;
+    right: 150px;
+    display: inline-block;
+    font-weight: bold;
+    font-size:15px;
+    color: #4267B2;
+    margin-left:100px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    outline: 0;
+    &:focus{
+      background-color: grey;
+      transition: all 1s ease-out;
+      border: none;
+      outline: 0;
+    }
+  }
+  &__loginbox{
+    position: absolute;
+    top:22px;
+    right: 50px;
+    display: inline-block;
+    font-weight: bold;
+    font-size:25px;
+    color: #F35500;
+    margin-left:100px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
+    outline: 0;
+    &:focus{
+      background-color: grey;
+      transition: all 1s ease-out;
+      border: none;
+      outline: 0;
+    }
+  }
+
+}
+a{
+  text-decoration: none;
+}

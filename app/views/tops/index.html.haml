@@ -1,3 +1,218 @@
 .body
   .body__body2
+    = render partial: 'products/plusbuttom'
     .body__body2--tops
+      = render partial: 'tops/header'
+    .body__body2--tops--images
+      .body__body2--tops--images--descriptionbox
+        .body__body2--tops--images--descriptionbox--description
+          こちらは、ロボット溶接機の生産数を記録しておけるウェブアプリです。
+    .body__body2--tops--machinenamebox
+      .body__body2--tops--machinenamebox--machinename
+        .body__body2--tops--machinenamebox--machinename--machinename2
+          ロボット溶接機.
+      .body__body2--tops--machinenamebox--yearbox
+        .body__body2--tops--machinenamebox--yearbox--productyearbox
+          .body__body2--tops--machinenamebox--yearbox--productyearbox--productyear
+            生産年::
+          %select.body__body2--tops--machinenamebox--yearbox--productyearbox--productyear2
+            %option{:value => "2020"} 2020
+            %option{:value => "2021"} 2021
+            %option{:value => "2022"} 2022
+            %option{:value => "2023"} 2023
+            %option{:value => "2024"} 2024
+            %option{:value => "2025"} 2025
+            %option{:value => "2026"} 2026
+            %option{:value => "2027"} 2027
+            %option{:value => "2028"} 2028
+            %option{:value => "2029"} 2029
+          %button.body__body2--tops--machinenamebox--yearbox--productyearbox--productbutton
+            見る
+    .body__body2--tops--machinebox
+      .body__body2--tops--machinebox--machineno01
+        .body__body2--tops--machinebox--machineno01--number01box
+          .body__body2--tops--machinebox--machineno01--number01box--number01
+            No.01
+        .body__body2--tops--machinebox--machineno01--yearyearbox
+          .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--yearyearyear
+              2020
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--yearlogo
+              年.
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "1.","#january"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "2.","#fabruary"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "3.","#march"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "4.","#april"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "5.","#may"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "6","#june"
+        #january.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            1月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #fabruary.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            2月
+        .body__body2--tops--machinebox--machineno01--cardbox
+          = render partial: 'products/card'
+        #march.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            3月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #april.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            4月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #may.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            5月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #june.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            6月
+        .body__body2--tops--machinebox--machineno01--cardbox
+      .body__body2--tops--machinebox--machineno01
+        .body__body2--tops--machinebox--machineno01--number01box
+          .body__body2--tops--machinebox--machineno01--number01box--number01
+            No.02
+        .body__body2--tops--machinebox--machineno01--yearyearbox
+          .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--yearyearyear
+              2020
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--yearlogo
+              年.
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "1.","#januaryjanuary"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "2.","#fabruaryfabruary"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "3.","#marchmarch"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "4.","#aprilapril"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "5.","#maymay"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "6","#junejune"
+        #januaryjanuary.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            1月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #fabruaryfabruary.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            2月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #marchmarch.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            3月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #aprilapril.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            4月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #maymay.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            5月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #junejune.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            6月
+        .body__body2--tops--machinebox--machineno01--cardbox
+    .body__body2--tops--machinebox
+      .body__body2--tops--machinebox--machineno01
+        .body__body2--tops--machinebox--machineno01--number01box
+          .body__body2--tops--machinebox--machineno01--number01box--number01
+            No.01
+        .body__body2--tops--machinebox--machineno01--yearyearbox
+          .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--yearyearyear
+              2020
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--yearlogo
+              年.
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "7.","#july"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "8.","#august"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "9.","#september"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "10.","#october"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "11.","#november"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "12","#december"
+        #july.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            7月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #august.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            8月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #september.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            9月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #october.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            10月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #november.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            11月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #december.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            12月
+        .body__body2--tops--machinebox--machineno01--cardbox
+      .body__body2--tops--machinebox--machineno01
+        .body__body2--tops--machinebox--machineno01--number01box
+          .body__body2--tops--machinebox--machineno01--number01box--number01
+            No.02
+        .body__body2--tops--machinebox--machineno01--yearyearbox
+          .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--yearyearyear
+              2020
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--yearlogo
+              年.
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "7.","#julyjuly"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "8.","#augustaugust"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "9.","#septemberseptember"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "10.","#octoberoctober"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "11.","#novembernovember"
+            .body__body2--tops--machinebox--machineno01--yearyearbox--yearyear--month
+              = link_to "12.","#decemberdecember"
+        #julyjuly.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            7月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #augustaugust.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            8月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #septemberseptember.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            9月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #octoberoctober.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            10月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #novembernovember.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            11月
+        .body__body2--tops--machinebox--machineno01--cardbox
+        #decemberdecember.body__body2--tops--machinebox--machineno01--monthbox
+          .body__body2--tops--machinebox--machineno01--monthbox--monthmonth
+            12月
+        .body__body2--tops--machinebox--machineno01--cardbox
+    = render partial: 'tops/footer'
