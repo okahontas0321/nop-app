@@ -42,7 +42,7 @@ Things you may want to cover:
 |Column|Type|Option|
 |------|----|------|
 |machine_name|integer|null: false|
-|operating_time|string|null:false|
+|operating_time|integer|null:false|
 
 ### Association
 
@@ -64,16 +64,18 @@ Things you may want to cover:
 
 |Column|Type|Option|
 |------|----|------|
-|production_year|string|null: false|
-|production_month|string|null: false|
-|production_day|string|null: false|
+|production_year|integer|null: false|
+|production_month|integer|null: false|
+|production_day|integer|null: false|
 |user_id|integer|null: false|
+|user_name|integer|null: false|
 |machine_id|integer|null: false|
 |product_name|string|null: false|
 |number_of_production|string|null: false|
-|good-product|string|null: false|
 |defective|string|null: false|
 |waste|string|null: false|
+|memo|text|null: false|
+
 
 ### Association
 

@@ -1,0 +1,229 @@
+.conteiner{
+  background-color: #4267B2;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+  margin: 20px auto;
+  // height: 1000px;
+  width: 800px;
+  padding: 0 100px;
+  &__datebox{
+    height: 100%;
+    width: 100%;
+    // background-color: #4267B2;
+    padding: 50px 0px;
+    &--date{
+      height: 40px;
+      width: 100%;
+      // background-color: cornflowerblue;
+      display: flex;
+      // border-bottom: 3px #FFFFFF solid;
+      margin-bottom: 30px;
+      &--text{
+        display: inline-block;
+        font-size: 40px;
+        font-weight: 500;
+        color: #FFFFFF;
+        text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
+      }
+      &--years{
+        font-size: 20px;
+        font-weight: 500;
+        margin-left: 20px;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+      }
+      &--month{
+        font-size: 20px;
+        font-weight: 500;
+        margin-left: 20px;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+      }
+      &--days{
+        font-size: 20px;
+        font-weight: 500;
+        margin-left: 20px;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+      }
+    }
+    &--usernamebox{
+      height: 40px;
+      width: 100%;
+      // background-color: cornflowerblue;
+      display: flex;
+      // border-bottom: 3px #FFFFFF solid;
+      margin-bottom: 30px;
+      &--username{
+        display: inline-block;
+        font-size: 40px;
+        font-weight: 500;
+        color: #FFFFFF;
+        text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
+        }
+      &--namebox {
+        font-size: 20px;
+        font-weight: 500;
+        width: 330px;
+        margin-left: 20px;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+      }
+    }
+    &--machinenumberbox{
+      height: 40px;
+      width: 100%;
+      display: flex;
+      margin-bottom: 30px;
+      &--machinenumber{
+        display: inline-block;
+        font-size: 40px;
+        font-weight: 500;
+        color: #FFFFFF;
+        text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
+      }
+      &--machineno{
+        font-size: 20px;
+        font-weight: 500;
+        width: 330px;
+        margin-left: 20px;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+      }
+    }
+    &--productsnumberbox{
+      height: 40px;
+      width: 100%;
+      display: flex;
+      margin-bottom: 30px;
+      &--productsname{
+        display: inline-block;
+        font-size: 40px;
+        font-weight: 500;
+        color: #FFFFFF;
+        text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
+        height: 40px;
+        width: 240px;
+      }
+      &--productnumber{
+        font-size: 15px;
+        color: grey;
+        font-weight: 500;
+        width: 200px;
+        margin-left: 20px;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+      }
+      &--numbernumernumer{
+        font-size: 15px;
+        color: grey;
+        font-weight: 500;
+        width: 60px;
+        margin-left: 20px;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+      }
+      &--texttext{
+        display: inline-block;
+        font-size: 40px;
+        font-weight: 500;
+        color: #FFFFFF;
+        text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
+        margin-left: 10px;
+      }
+    }
+    &--tsnumberbox{
+      height: 40px;
+      width: 100%;
+      display: flex;
+      margin-bottom: 30px;
+      &--texttexttext{
+        display: inline-block;
+        font-size: 40px;
+        font-weight: 500;
+        color: #FFFFFF;
+        text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
+        height: 40px;
+        width: 240px;
+      }
+      &--numbeproduction{
+        font-size: 15px;
+        color: grey;
+        font-weight: 500;
+        width: 280px;
+        margin-left: 20px;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+      }
+      &--numbeproducti{
+        display: inline-block;
+        font-size: 40px;
+        font-weight: 500;
+        color: #FFFFFF;
+        text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
+        margin-left: 10px;
+      }
+    }
+  }
+}
+.textbox{
+  width: 100%;
+  &__memobox{
+        font-size: 40px;
+        font-weight: 500;
+        color: #FFFFFF;
+        text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
+        margin-bottom: 10px;
+        
+  }
+  &__memoboxbox{
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+    margin-bottom: 30px;
+    font-size: 15px;
+    padding: 15px;
+  }
+}
+.space{
+  height: 8px;
+  width: 100%;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+}
+.submitbuttom{
+  border: 1px solid #ea352b;
+  border-radius: 15px;
+  display: inline-block;
+  text-align: center;
+  background-color: #ea352b;
+  margin-top: auto;
+  margin-bottom: auto;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+  text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
+  // padding: 10px 40px;
+  height: 50px;
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  color:#FFFFFF;
+  cursor: pointer;
+          outline: 0;
+          &:focus{
+            background-color: grey;
+            transition: all 1s ease-out;
+            border: none;
+            outline: 0;
+          }
+}
+.toppagereturn{
+  width: 100%;
+  display: flex;
+  text-align: center;
+  margin: 30px 0;
+  &__toppagereturntext{
+    font-size: 25px;
+    display: inline-block;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
+  }
+  a{
+    text-decoration: none;
+    color:#4267B2;
+    display: inline-block;
+    margin: 0 auto;
+  }
+}

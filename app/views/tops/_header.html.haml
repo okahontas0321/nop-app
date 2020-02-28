@@ -1,0 +1,20 @@
+.header
+  = link_to root_path do
+    .header__logo
+      .header__logo--logobox
+        .header__logo--logobox--box
+          .header__logo--logobox--box--text
+            N
+          .header__logo--logobox--box--text2
+            op
+  = link_to root_path do
+    .header__title
+      Number of production.
+    .header__username
+      = current_user.name
+    = link_to products_foreachproducts_path do
+      %button.header__foreachpoducts
+        製品ごとのページ
+    = link_to edit_user_path(current_user) do
+      %button.header__loginbox
+        +++
