@@ -37,7 +37,7 @@ Things you may want to cover:
 - has_many :users_machines
 - has_many :products,dependent: :destroy
 
-## machinesテーブル
+## machineテーブル
 
 |Column|Type|Option|
 |------|----|------|
