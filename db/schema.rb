@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200227121724) do
+ActiveRecord::Schema.define(version: 20200303125316) do
+
+  create_table "machine_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "machine_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["machine_id"], name: "index_machine_users_on_machine_id", using: :btree
+    t.index ["user_id"], name: "index_machine_users_on_user_id", using: :btree
+  end
+
+  create_table "machines", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name",                       null: false
+    t.integer  "operating_time", default: 0, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.index ["name"], name: "index_machines_on_name", unique: true, using: :btree
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                                null: false
@@ -26,4 +43,6 @@ ActiveRecord::Schema.define(version: 20200227121724) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "machine_users", "machines"
+  add_foreign_key "machine_users", "users"
 end

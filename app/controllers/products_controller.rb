@@ -10,4 +10,13 @@ class ProductsController < ApplicationController
 
   def foreachproducts
   end
+
+  def create
+  end
+
+  def new
+  end
+
+  def machine
+  end
 end

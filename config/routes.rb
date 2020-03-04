@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'products/products_submit'=>"products#products_submit"
   get 'products/details'=>"products#details"
   get 'products/foreachproducts'=>"products#foreachproducts"
+  post 'create' => "products#create"
+  get 'products/new'=>"products#new"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'tops#index'
