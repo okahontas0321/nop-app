@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200303125316) do
+ActiveRecord::Schema.define(version: 20200304103340) do
 
   create_table "machine_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "machine_id"
@@ -22,11 +22,29 @@ ActiveRecord::Schema.define(version: 20200303125316) do
   end
 
   create_table "machines", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",                       null: false
-    t.integer  "operating_time", default: 0, null: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["name"], name: "index_machines_on_name", unique: true, using: :btree
+  end
+
+  create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "producer",                                       null: false
+    t.string   "machine_number",                                 null: false
+    t.string   "product_no",                                     null: false
+    t.string   "number_of_production",                           null: false
+    t.string   "defective",                                      null: false
+    t.string   "waste",                                          null: false
+    t.string   "total_production",                               null: false
+    t.text     "description",          limit: 65535,             null: false
+    t.integer  "production_year",                                null: false
+    t.integer  "production_month",                               null: false
+    t.integer  "production_day",                                 null: false
+    t.integer  "operating_time",                     default: 0, null: false
+    t.integer  "user_id",                                        null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
+    t.index ["user_id"], name: "index_products_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -45,4 +63,5 @@ ActiveRecord::Schema.define(version: 20200303125316) do
 
   add_foreign_key "machine_users", "machines"
   add_foreign_key "machine_users", "users"
+  add_foreign_key "products", "users"
 end

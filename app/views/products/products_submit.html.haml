@@ -2,250 +2,153 @@
   .body__body2
     .body__body2--tops
       = render partial: 'tops/header'
+    = form_for @product, url: create_path, method: :post do |f|
       .conteiner
         .conteiner__datebox
           .conteiner__datebox--date
             .conteiner__datebox--date--text
               製造年月日：
-            %select.conteiner__datebox--date--years
-              %option{:value => "2020"} 2020
-              %option{:value => "2021"} 2021
-              %option{:value => "2022"} 2022
-              %option{:value => "2023"} 2023
-              %option{:value => "2024"} 2024
-              %option{:value => "2025"} 2025
-              %option{:value => "2026"} 2026
-              %option{:value => "2027"} 2027
-              %option{:value => "2028"} 2028
-              %option{:value => "2029"} 2029
+            =f.select :production_year,[*2020..2050], {},{:id=>"year",class: 'conteiner__datebox--date--years'}
             .conteiner__datebox--date--text
               年
-            %select.conteiner__datebox--date--month
-              %option{:value => "1"} 1
-              %option{:value => "2"} 2
-              %option{:value => "3"} 3
-              %option{:value => "4"} 4
-              %option{:value => "5"} 5
-              %option{:value => "6"} 6
-              %option{:value => "7"} 7
-              %option{:value => "8"} 8
-              %option{:value => "9"} 9
-              %option{:value => "10"} 10
-              %option{:value => "11"} 11
-              %option{:value => "12"} 12
+            =f.select :production_month, [*1..12], {}, {:id=>"month",class: 'conteiner__datebox--date--month'}
             .conteiner__datebox--date--text
               月
-            %select.conteiner__datebox--date--days
-              %option{:value => "1"} 1
-              %option{:value => "2"} 2
-              %option{:value => "3"} 3
-              %option{:value => "4"} 4
-              %option{:value => "5"} 5
-              %option{:value => "6"} 6
-              %option{:value => "7"} 7
-              %option{:value => "8"} 8
-              %option{:value => "9"} 9
-              %option{:value => "10"} 10
-              %option{:value => "11"} 11
-              %option{:value => "12"} 12
-              %option{:value => "13"} 13
-              %option{:value => "14"} 14
-              %option{:value => "15"} 15
-              %option{:value => "16"} 16
-              %option{:value => "17"} 17
-              %option{:value => "18"} 18
-              %option{:value => "19"} 19
-              %option{:value => "20"} 20
-              %option{:value => "21"} 21
-              %option{:value => "22"} 22
-              %option{:value => "23"} 23
-              %option{:value => "24"} 24
-              %option{:value => "25"} 25
-              %option{:value => "26"} 26
-              %option{:value => "27"} 27
-              %option{:value => "28"} 28
-              %option{:value => "29"} 29
-              %option{:value => "30"} 30
-              %option{:value => "31"} 31
+            =f.select :production_day, [*1..31],{}, {:id=>"day",class: 'conteiner__datebox--date--days' }
             .conteiner__datebox--date--text
               日
-          -# .conteiner__datebox--usernamebox
-          -#   .conteiner__datebox--usernamebox--username
-          -#     名前　　　：
-          -#   %select.conteiner__datebox--usernamebox--namebox
-          -#     %option{:value => "古森　一徳"} 古森　一徳
-          -#     %option{:value => "岡田　公彦"} 岡田　公彦
           .conteiner__datebox--machinenumberbox
             .conteiner__datebox--machinenumberbox--machinenumber
               溶接機番号：
-            %select.conteiner__datebox--machinenumberbox--machineno
-              %option{:value => "No.1"} No.1
-              %option{:value => "No.2"} No.2
+            = f.collection_select :machine_number, Machine.all,:id,:name,{prompt: "---"}, {class: 'conteiner__datebox--machinenumberbox--machineno',id:'machine_number'}
           .conteiner__datebox--machinenumberbox
             .conteiner__datebox--machinenumberbox--machinenumber
               稼働時間　：
-            %select.conteiner__datebox--machinenumberbox--machineno
-              %option{:value => "1"} 1H
-              %option{:value => "1.5"} 1.5H
-              %option{:value => "2"} 2H
-              %option{:value => "2.5"} 2.5H
-              %option{:value => "3"} 3H
-              %option{:value => "3.5"} 3.5H
-              %option{:value => "4"} 4H
-              %option{:value => "4.5"} 4.5H
-              %option{:value => "5"} 5H
-              %option{:value => "5.5"} 5.5H
-              %option{:value => "6"} 6H
-              %option{:value => "6.5"} 6.5H
-              %option{:value => "7"} 7H
-              %option{:value => "7.5"} 7.5H
-              %option{:value => "8"} 8H
-              %option{:value => "8.5"} 8.5H
+            = f.select :operating_time, Product.operating_times.keys.to_a,{prompt: "---"}, {class: 'conteiner__datebox--machinenumberbox--machineno',id:'operating_time'}
           .space
           .conteiner__datebox--productsnumberbox
             .conteiner__datebox--productsnumberbox--productsname
               1.製品番号：
-            %input.conteiner__datebox--productsnumberbox--productnumber{type:"text",placeholder:" 製品番号を書いて下さい"}
-            %input.conteiner__datebox--productsnumberbox--numbernumernumer{type:"text",placeholder:" 個数"}
+            = f.text_field :product_no, {placeholder:" 製品番号を書いて下さい", class: "conteiner__datebox--productsnumberbox--productnumber" }
+            = f.text_field :number_of_production, {placeholder:" 個数", class: "conteiner__datebox--productsnumberbox--numbernumernumer" }
             .conteiner__datebox--productsnumberbox--texttext
               個
           .conteiner__datebox--tsnumberbox
             .conteiner__datebox--tsnumberbox--texttexttext
               溶接不良数：
-            %input.conteiner__datebox--tsnumberbox--numbeproduction{type:"text",placeholder:" 今日の溶接不良数です。"}
+            = f.text_field :defective, {placeholder:" 今日の溶接不良数です。", class: "conteiner__datebox--tsnumberbox--numbeproduction" }
             .conteiner__datebox--tsnumberbox--numbeproducti
               個
           .conteiner__datebox--tsnumberbox
             .conteiner__datebox--tsnumberbox--texttexttext
               廃棄数　　：
-            %input.conteiner__datebox--tsnumberbox--numbeproduction{type:"text",placeholder:" 今日の廃棄品数です。"}
+            = f.text_field :waste, {placeholder:" 今日の廃棄品数です。", class: "conteiner__datebox--tsnumberbox--numbeproduction" }
             .conteiner__datebox--tsnumberbox--numbeproducti
               個
           .conteiner__datebox--usernamebox
             .conteiner__datebox--usernamebox--username
               生産者　　：
-            %select.conteiner__datebox--usernamebox--namebox
-              %option{:value => "古森　一徳"} 古森　一徳
-              %option{:value => "岡田　公彦"} 岡田　公彦
+              = f.collection_select :producer, User.all,:id,:name,{prompt: "---"},{id:'name_select'}
           .conteiner__datebox--usernamebox
             .conteiner__datebox--usernamebox--username
               生産者　　：
-            %select.conteiner__datebox--usernamebox--namebox
-              %option{:value => "--"} --
-              %option{:value => "古森　一徳"} 古森　一徳
-              %option{:value => "岡田　公彦"} 岡田　公彦
+              = f.collection_select :producer, User.all,:id,:name,{prompt: "---"},{id:'name_select'}
           .space
           .conteiner__datebox--productsnumberbox
             .conteiner__datebox--productsnumberbox--productsname
               2.製品番号：
-            %input.conteiner__datebox--productsnumberbox--productnumber{type:"text",placeholder:" 製品番号を書いて下さい"}
-            %input.conteiner__datebox--productsnumberbox--numbernumernumer{type:"text",placeholder:" 個数"}
+            = f.text_field :product_no, {placeholder:" 製品番号を書いて下さい", class: "conteiner__datebox--productsnumberbox--productnumber" }
+            = f.text_field :number_of_production, {placeholder:" 個数", class: "conteiner__datebox--productsnumberbox--numbernumernumer" }
             .conteiner__datebox--productsnumberbox--texttext
               個
           .conteiner__datebox--tsnumberbox
             .conteiner__datebox--tsnumberbox--texttexttext
               溶接不良数：
-            %input.conteiner__datebox--tsnumberbox--numbeproduction{type:"text",placeholder:" 今日の溶接不良数です。"}
+            = f.text_field :defective, {placeholder:" 今日の溶接不良数です。", class: "conteiner__datebox--tsnumberbox--numbeproduction" }
             .conteiner__datebox--tsnumberbox--numbeproducti
               個
           .conteiner__datebox--tsnumberbox
             .conteiner__datebox--tsnumberbox--texttexttext
               廃棄数　　：
-            %input.conteiner__datebox--tsnumberbox--numbeproduction{type:"text",placeholder:" 今日の廃棄品数です。"}
+            = f.text_field :waste, {placeholder:" 今日の廃棄品数です。", class: "conteiner__datebox--tsnumberbox--numbeproduction" }
             .conteiner__datebox--tsnumberbox--numbeproducti
               個
           .conteiner__datebox--usernamebox
             .conteiner__datebox--usernamebox--username
               生産者　　：
-            %select.conteiner__datebox--usernamebox--namebox
-              %option{:value => "古森　一徳"} 古森　一徳
-              %option{:value => "岡田　公彦"} 岡田　公彦
+              = f.collection_select :producer, User.all,:id,:name,{prompt: "---"},{id:'name_select'}
           .conteiner__datebox--usernamebox
             .conteiner__datebox--usernamebox--username
               生産者　　：
-            %select.conteiner__datebox--usernamebox--namebox
-              %option{:value => "--"} --
-              %option{:value => "古森　一徳"} 古森　一徳
-              %option{:value => "岡田　公彦"} 岡田　公彦
+              = f.collection_select :producer, User.all,:id,:name,{prompt: "---"},{id:'name_select'}
           .space
           .conteiner__datebox--productsnumberbox
             .conteiner__datebox--productsnumberbox--productsname
               3.製品番号：
-            %input.conteiner__datebox--productsnumberbox--productnumber{type:"text",placeholder:" 製品番号を書いて下さい"}
-            %input.conteiner__datebox--productsnumberbox--numbernumernumer{type:"text",placeholder:" 個数"}
+            = f.text_field :product_no, {placeholder:" 製品番号を書いて下さい", class: "conteiner__datebox--productsnumberbox--productnumber" }
+            = f.text_field :number_of_production, {placeholder:" 個数", class: "conteiner__datebox--productsnumberbox--numbernumernumer" }
             .conteiner__datebox--productsnumberbox--texttext
               個
           .conteiner__datebox--tsnumberbox
             .conteiner__datebox--tsnumberbox--texttexttext
               溶接不良数：
-            %input.conteiner__datebox--tsnumberbox--numbeproduction{type:"text",placeholder:" 今日の溶接不良数です。"}
+            = f.text_field :defective, {placeholder:" 今日の溶接不良数です。", class: "conteiner__datebox--tsnumberbox--numbeproduction" }
             .conteiner__datebox--tsnumberbox--numbeproducti
               個
           .conteiner__datebox--tsnumberbox
             .conteiner__datebox--tsnumberbox--texttexttext
               廃棄数　　：
-            %input.conteiner__datebox--tsnumberbox--numbeproduction{type:"text",placeholder:" 今日の廃棄品数です。"}
+            = f.text_field :waste, {placeholder:" 今日の廃棄品数です。", class: "conteiner__datebox--tsnumberbox--numbeproduction" }
             .conteiner__datebox--tsnumberbox--numbeproducti
               個
           .conteiner__datebox--usernamebox
             .conteiner__datebox--usernamebox--username
               生産者　　：
-            %select.conteiner__datebox--usernamebox--namebox
-              %option{:value => "古森　一徳"} 古森　一徳
-              %option{:value => "岡田　公彦"} 岡田　公彦
+              = f.collection_select :producer, User.all,:id,:name,{prompt: "---"},{id:'name_select'}
           .conteiner__datebox--usernamebox
             .conteiner__datebox--usernamebox--username
               生産者　　：
-            %select.conteiner__datebox--usernamebox--namebox
-              %option{:value => "--"} --
-              %option{:value => "古森　一徳"} 古森　一徳
-              %option{:value => "岡田　公彦"} 岡田　公彦
+              = f.collection_select :producer, User.all,:id,:name,{prompt: "---"},{id:'name_select'}
           .space
           .conteiner__datebox--productsnumberbox
             .conteiner__datebox--productsnumberbox--productsname
               4.製品番号：
-            %input.conteiner__datebox--productsnumberbox--productnumber{type:"text",placeholder:" 製品番号を書いて下さい"}
-            %input.conteiner__datebox--productsnumberbox--numbernumernumer{type:"text",value:" 個数"}
+            = f.text_field :product_no, {placeholder:" 製品番号を書いて下さい", class: "conteiner__datebox--productsnumberbox--productnumber" }
+            = f.text_field :number_of_production, {placeholder:" 個数", class: "conteiner__datebox--productsnumberbox--numbernumernumer" }
             .conteiner__datebox--productsnumberbox--texttext
               個
           .conteiner__datebox--tsnumberbox
             .conteiner__datebox--tsnumberbox--texttexttext
               溶接不良数：
-            %input.conteiner__datebox--tsnumberbox--numbeproduction{type:"text",placeholder:" 今日の溶接不良数です。"}
+            = f.text_field :defective, {placeholder:" 今日の溶接不良数です。", class: "conteiner__datebox--tsnumberbox--numbeproduction" }
             .conteiner__datebox--tsnumberbox--numbeproducti
               個
           .conteiner__datebox--tsnumberbox
             .conteiner__datebox--tsnumberbox--texttexttext
               廃棄数　　：
-            %input.conteiner__datebox--tsnumberbox--numbeproduction{type:"text",placeholder:" 今日の廃棄品数です。"}
+            = f.text_field :waste, {placeholder:" 今日の廃棄品数です。", class: "conteiner__datebox--tsnumberbox--numbeproduction" }
             .conteiner__datebox--tsnumberbox--numbeproducti
               個
           .conteiner__datebox--usernamebox
             .conteiner__datebox--usernamebox--username
               生産者　　：
-            %select.conteiner__datebox--usernamebox--namebox
-              %option{:value => "古森　一徳"} 古森　一徳
-              %option{:value => "岡田　公彦"} 岡田　公彦
+              = f.collection_select :producer, User.all,:id,:name,{prompt: "---"},{id:'name_select'}
           .conteiner__datebox--usernamebox
             .conteiner__datebox--usernamebox--username
               生産者　　：
-            %select.conteiner__datebox--usernamebox--namebox
-              %option{:value => "--"} --
-              %option{:value => "古森　一徳"} 古森　一徳
-              %option{:value => "岡田　公彦"} 岡田　公彦
+              = f.collection_select :producer, User.all,:id,:name,{prompt: "---"},{id:'name_select'}
           .space
           .conteiner__datebox--tsnumberbox
             .conteiner__datebox--tsnumberbox--texttexttext
               総数　　　：
-            %input.conteiner__datebox--tsnumberbox--numbeproduction{type:"text",placeholder:" 今日の総生産です。"}
+            = f.text_field :total_production, {placeholder:" 今日の総生産です。", class: "conteiner__datebox--tsnumberbox--numbeproduction" }
             .conteiner__datebox--tsnumberbox--numbeproducti
               個
           .textbox
             .textbox__memobox
               メモ
-            %textarea.textbox__memoboxbox{type:"text",placeholder:"例>>今日の10310②は合計500個の内200個なので、明日残りの300個から"}
-          %button.submitbuttom
-            送信
+            = f.text_area :description, {placeholder:"例>>今日の10310②は合計500個の内200個なので、明日残りの300個から", class: "textbox__memoboxbox"}
+            = f.submit  "送信",class: "buttom"
       .toppagereturn
         = link_to root_path do
           .toppagereturn__toppagereturntext

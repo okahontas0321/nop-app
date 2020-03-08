@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :machine_users
   has_many :machines, through: :machine_users
+  has_many :products
 end
