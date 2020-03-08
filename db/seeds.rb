@@ -6,13 +6,3 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Machine.create(
-  [
-    {
-      name:  'No.01'
-    },
-    {
-      name:  'No.02'
-    }
-  ]
-)
