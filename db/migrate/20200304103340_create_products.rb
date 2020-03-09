@@ -2,6 +2,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
   def change
     create_table :products do |t|
       t.string :producer,              null:false
+      t.string :producer02,            null:false
       t.string :machine_number,        null:false
       t.string  :product_no,           null:false
       t.string :number_of_production,  null:false

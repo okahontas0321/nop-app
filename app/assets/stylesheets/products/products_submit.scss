@@ -46,9 +46,7 @@
     &--usernamebox{
       height: 40px;
       width: 100%;
-      // background-color: cornflowerblue;
       display: flex;
-      // border-bottom: 3px #FFFFFF solid;
       margin-bottom: 30px;
       &--username{
         display: inline-block;
@@ -92,6 +90,7 @@
       width: 100%;
       display: flex;
       margin-bottom: 30px;
+      // position: relative;
       &--productsname{
         display: inline-block;
         font-size: 40px;
@@ -105,17 +104,24 @@
         font-size: 15px;
         color: grey;
         font-weight: 500;
+        height: 40px;
         width: 200px;
         margin-left: 20px;
         box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+        // position: absolute;
+        // top:0;
       }
       &--numbernumernumer{
         font-size: 15px;
         color: grey;
         font-weight: 500;
+        height: 40px;
         width: 60px;
         margin-left: 20px;
-        box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+        // position: absolute;
+        // top:0; 
+        // right: 50px;
       }
       &--texttext{
         display: inline-block;
@@ -124,6 +130,8 @@
         color: #FFFFFF;
         text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
         margin-left: 10px;
+        // position: absolute;
+        // right: 0;
       }
     }
     &--tsnumberbox{
@@ -131,6 +139,7 @@
       width: 100%;
       display: flex;
       margin-bottom: 30px;
+      // position: relative;
       &--texttexttext{
         display: inline-block;
         font-size: 40px;
@@ -144,9 +153,12 @@
         font-size: 15px;
         color: grey;
         font-weight: 500;
+        height: 40px;
         width: 280px;
         margin-left: 20px;
         box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+        // position: absolute;
+        // top:0;
       }
       &--numbeproducti{
         display: inline-block;
@@ -155,6 +167,8 @@
         color: #FFFFFF;
         text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
         margin-left: 10px;
+        // position: absolute;
+        // right: 0;
       }
     }
   }
@@ -229,7 +243,7 @@
     margin: 0 auto;
   }
 }
-#name_select{
+#name_select1-1{
   position: absolute;
   top:0;
   // right: 0;
@@ -239,4 +253,103 @@
   width: 330px;
   margin-left: 20px;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+}
+#name_select1-2{
+  position: absolute;
+  top:0;
+  // right: 0;
+  font-size: 20px;
+  height: 40px;
+  font-weight: 500;
+  width: 330px;
+  margin-left: 20px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+  // display: none;
+}
+#name_select2-1{
+  position: absolute;
+  top:0;
+  // right: 0;
+  font-size: 20px;
+  height: 40px;
+  font-weight: 500;
+  width: 330px;
+  margin-left: 20px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+}
+#name_select2-2{
+  position: absolute;
+  top:0;
+  // right: 0;
+  font-size: 20px;
+  height: 40px;
+  font-weight: 500;
+  width: 330px;
+  margin-left: 20px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+}
+#name_select3-1{
+  position: absolute;
+  top:0;
+  // right: 0;
+  font-size: 20px;
+  height: 40px;
+  font-weight: 500;
+  width: 330px;
+  margin-left: 20px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+}
+#name_select3-2{
+  position: absolute;
+  top:0;
+  // right: 0;
+  font-size: 20px;
+  height: 40px;
+  font-weight: 500;
+  width: 330px;
+  margin-left: 20px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+}
+#name_select4-1{
+  position: absolute;
+  top:0;
+  // right: 0;
+  font-size: 20px;
+  height: 40px;
+  font-weight: 500;
+  width: 330px;
+  margin-left: 20px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+}
+#name_select4-2{
+  position: absolute;
+  top:0;
+  // right: 0;
+  font-size: 20px;
+  height: 40px;
+  font-weight: 500;
+  width: 330px;
+  margin-left: 20px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+}
+#box02{
+  display: none;
+}
+#box03{
+  display: none;
+}
+#box04{
+  display: none;
+}
+#producer1-2{
+  display: none;
+}
+#producer2-2{
+  display: none;
+}
+#producer3-2{
+  display: none;
+}
+#producer4-2{
+  display: none;
 }
