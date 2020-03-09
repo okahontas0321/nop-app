@@ -8,9 +8,11 @@ class Product < ApplicationRecord
     "5.5H":11,"6H":12,"6.5H":13,"7H":14,"7.5H":15,
     "8H":16,"8.5H":17,"9H":18,"9.5H":19,"10H":20
   }
+  
 
 
   validates      :producer,             presence: true, on: :validates_product
+  validates      :producer02,           presence: true, on: :validates_product
   validates      :machine_number,       presence: true, on: :validates_product
   validates      :operating_time,       presence: true, on: :validates_product
   validates      :product_no,           presence: true, on: :validates_product

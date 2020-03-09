@@ -35,6 +35,7 @@ class ProductsController < ApplicationController
   def create_params
     params.require(:product).permit(
       :producer, 
+      :producer02,
       :machine_number,
       :product_no,
       :production_year, 

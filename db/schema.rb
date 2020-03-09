@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20200304103340) do
 
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "producer",                                       null: false
+    t.string   "producer02",                                     null: false
     t.string   "machine_number",                                 null: false
     t.string   "product_no",                                     null: false
     t.string   "number_of_production",                           null: false
