@@ -2,20 +2,16 @@
   background-color: #4267B2;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
   margin: 20px auto;
-  // height: 1000px;
   width: 800px;
   padding: 0 100px;
   &__datebox{
     height: 100%;
     width: 100%;
-    // background-color: #4267B2;
     padding: 50px 0px;
     &--date{
       height: 40px;
       width: 100%;
-      // background-color: cornflowerblue;
       display: flex;
-      // border-bottom: 3px #FFFFFF solid;
       margin-bottom: 30px;
       &--text{
         display: inline-block;
@@ -85,61 +81,103 @@
         box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
       }
     }
-    &--productsnumberbox{
-      height: 40px;
-      width: 100%;
+    .box01{
       display: flex;
-      margin-bottom: 30px;
-      // position: relative;
-      &--productsname{
-        display: inline-block;
-        font-size: 40px;
-        font-weight: 500;
-        color: #FFFFFF;
-        text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
-        height: 40px;
-        width: 240px;
+      width: 100%;
+      .productsnumberbox{
+        width: 50%;
+        float: left;
+        &--productsname{
+          display: inline-block;
+          font-size: 40px;
+          font-weight: 500;
+          color: #FFFFFF;
+          text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
+          height: 40px;
+          width: 240px;
+          margin-bottom: 30px;
+        }
       }
-      &--productnumber{
-        font-size: 15px;
-        color: grey;
-        font-weight: 500;
-        height: 40px;
-        width: 200px;
-        margin-left: 20px;
-        box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
-        // position: absolute;
-        // top:0;
-      }
-      &--numbernumernumer{
-        font-size: 15px;
-        color: grey;
-        font-weight: 500;
-        height: 40px;
-        width: 60px;
-        margin-left: 20px;
-        box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
-        // position: absolute;
-        // top:0; 
-        // right: 50px;
-      }
-      &--texttext{
-        display: inline-block;
-        font-size: 40px;
-        font-weight: 500;
-        color: #FFFFFF;
-        text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
-        margin-left: 10px;
-        // position: absolute;
-        // right: 0;
+      .productsnumberbox02{
+        width: 50%;
+        float: left;
+        position: relative;
+          .productnumber{
+            height: 40px;
+            width: 180px;
+            font-size: 20px;
+            margin-bottom: 30px;
+          }
+          .numbernumernumer{
+            height: 40px;
+            width: 50px;
+            position: absolute;
+            right: 50px;
+            margin-bottom: 30px;
+          }
+          .conteinertexttext{
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            margin-bottom: 30px;
+            font-size: 40px;
+            font-weight: 500;
+            color: #FFFFFF;
+            text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
+            height: 40px;
+          }
+        .numbeproduction{
+          height: 40px;
+          width: 250px;
+          margin-bottom: 30px;
+        }
+        .conteinertexttextb{
+          display: inline-block;
+            position: absolute;
+            right: 0;
+            margin-bottom: 30px;
+            font-size: 40px;
+            font-weight: 500;
+            color: #FFFFFF;
+            text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
+            height: 40px;
+        }
+        .numbeproduction2{
+          height: 40px;
+          width: 250px;
+          margin-bottom: 30px;
+        }
+        .conteinertexttextc{
+          display: inline-block;
+            position: absolute;
+            right: 0;
+            margin-bottom: 30px;
+            font-size: 40px;
+            font-weight: 500;
+            color: #FFFFFF;
+            text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
+            height: 40px;
+        }
+        .producer001{
+          height: 40px;
+          width: 100%;
+          margin-bottom: 30px;
+          font-size: 20px;
+        }
+        .producer002{
+          height: 40px;
+          width: 100%;
+          margin-bottom: 30px;
+          font-size: 20px;
+        }
       }
     }
-    &--tsnumberbox{
+    .conteiner__datebox--tsnumberbox{
       height: 40px;
       width: 100%;
       display: flex;
+      // padding-top: 20px;
       margin-bottom: 30px;
-      // position: relative;
       &--texttexttext{
         display: inline-block;
         font-size: 40px;
@@ -151,14 +189,11 @@
       }
       &--numbeproduction{
         font-size: 15px;
-        color: grey;
         font-weight: 500;
         height: 40px;
         width: 280px;
         margin-left: 20px;
         box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
-        // position: absolute;
-        // top:0;
       }
       &--numbeproducti{
         display: inline-block;
@@ -166,11 +201,10 @@
         font-weight: 500;
         color: #FFFFFF;
         text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
-        margin-left: 10px;
-        // position: absolute;
-        // right: 0;
+        margin-left: 20px;
       }
     }
+    
   }
 }
 .textbox{
@@ -211,7 +245,6 @@
   margin-bottom: auto;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
   text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
-  // padding: 10px 40px;
   height: 50px;
   width: 100%;
   font-size: 30px;
@@ -243,113 +276,16 @@
     margin: 0 auto;
   }
 }
-#name_select1-1{
-  position: absolute;
-  top:0;
-  // right: 0;
+.links{
+  display: inline-block;
+  a.add_fields{
+    font-size: 20px;
+    color:#FFFFFF;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
+  }
+}
+a.remove_fields{
   font-size: 20px;
-  height: 40px;
-  font-weight: 500;
-  width: 330px;
-  margin-left: 20px;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
-}
-#name_select1-2{
-  position: absolute;
-  top:0;
-  // right: 0;
-  font-size: 20px;
-  height: 40px;
-  font-weight: 500;
-  width: 330px;
-  margin-left: 20px;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
-  // display: none;
-}
-#name_select2-1{
-  position: absolute;
-  top:0;
-  // right: 0;
-  font-size: 20px;
-  height: 40px;
-  font-weight: 500;
-  width: 330px;
-  margin-left: 20px;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
-}
-#name_select2-2{
-  position: absolute;
-  top:0;
-  // right: 0;
-  font-size: 20px;
-  height: 40px;
-  font-weight: 500;
-  width: 330px;
-  margin-left: 20px;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
-}
-#name_select3-1{
-  position: absolute;
-  top:0;
-  // right: 0;
-  font-size: 20px;
-  height: 40px;
-  font-weight: 500;
-  width: 330px;
-  margin-left: 20px;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
-}
-#name_select3-2{
-  position: absolute;
-  top:0;
-  // right: 0;
-  font-size: 20px;
-  height: 40px;
-  font-weight: 500;
-  width: 330px;
-  margin-left: 20px;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
-}
-#name_select4-1{
-  position: absolute;
-  top:0;
-  // right: 0;
-  font-size: 20px;
-  height: 40px;
-  font-weight: 500;
-  width: 330px;
-  margin-left: 20px;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
-}
-#name_select4-2{
-  position: absolute;
-  top:0;
-  // right: 0;
-  font-size: 20px;
-  height: 40px;
-  font-weight: 500;
-  width: 330px;
-  margin-left: 20px;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
-}
-#box02{
-  display: none;
-}
-#box03{
-  display: none;
-}
-#box04{
-  display: none;
-}
-#producer1-2{
-  display: none;
-}
-#producer2-2{
-  display: none;
-}
-#producer3-2{
-  display: none;
-}
-#producer4-2{
-  display: none;
+  color:#EA352B;
+  text-shadow: 5px 5px 5px rgba(0,0,0,0.4); 
 }

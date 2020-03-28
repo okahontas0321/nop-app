@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'products/card'=>"products#card"
-  get 'products/plusbuttom'=>"products#plusbuttom"
-  get 'products/products_submit'=>"products#products_submit"
-  get 'products/details'=>"products#details"
-  get 'products/foreachproducts'=>"products#foreachproducts"
+  get 'dated/card'=>"dated#card"
+  get 'dated/plusbuttom'=>"dated#plusbuttom"
+  get 'dated/products_submit'=>"dated#products_submit"
+  get 'dated/details'=>"dated#details"
+  get 'dated/foreachproducts'=>"dated#foreachproducts"
   # post 'products/create' => "products#create"
   # get 'products/new'=>"products#new"
-  post 'create' => "products#create"
-  get 'new'=>"products#new"
+  post 'create' => "dated#create"
+  get 'new'=>"dated#new"
 
   
   

@@ -1,0 +1,30 @@
+.nested-fields
+  = f.hidden_field :user_id, :value => current_user.id
+  = f.fields_for :date_products, @dated.date_products.build do |i|
+    .space
+    .box01
+      .productsnumberbox
+        .productsnumberbox--productsname
+          製品番号　：
+        .productsnumberbox--productsname
+          溶接不良数：
+        .productsnumberbox--productsname
+          廃棄数　　：
+        .productsnumberbox--productsname
+          生産者　　：
+        .productsnumberbox--productsname
+          生産者　　：
+      .productsnumberbox02
+        = f.collection_select :product_no, Product.all,:id,:product_no,{prompt: "---"}, {class: "productnumber"}
+        = f.number_field :number_of_production, {placeholder:" 個数", class: "numbernumernumer"}
+        .conteinertexttext
+          個
+        = f.number_field :defective, {placeholder:" 今日の溶接不良数です。", class: "numbeproduction"}
+        .conteinertexttextb
+          個
+        = f.number_field :waste, {placeholder:" 今日の廃棄品数です。", class: "numbeproduction2"}
+        .conteinertexttextc
+          個
+        = f.collection_select :producer, User.all,:id,:name,{prompt: "---"},{class:'producer001'}
+        = f.collection_select :producer02, User.all,:id,:name,{prompt: "---"},{class:'producer002'}
+    = link_to_remove_association '削除', f

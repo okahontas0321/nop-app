@@ -1,0 +1,73 @@
+= form_for @dated, url: create_path, method: :post do |f|
+  .body
+    .body__body2
+      .body__body2--tops
+        = render partial: 'tops/header'
+        .conteiner
+          .conteiner__datebox
+            .conteiner__datebox--date
+              .conteiner__datebox--date--text
+                製造年月日：
+              =f.select :production_year,[*2020..2050], {},{:id=>"year",class: 'conteiner__datebox--date--years'}
+              .conteiner__datebox--date--text
+                年
+              =f.select :production_month, [*1..12], {}, {:id=>"month",class: 'conteiner__datebox--date--month'}
+              .conteiner__datebox--date--text
+                月
+              =f.select :production_day, [*1..31],{}, {:id=>"day",class: 'conteiner__datebox--date--days' }
+              .conteiner__datebox--date--text
+                日
+            .conteiner__datebox--machinenumberbox
+              .conteiner__datebox--machinenumberbox--machinenumber
+                溶接機番号：
+              = f.collection_select :machine_number, Machine.all,:id,:name,{prompt: "---"}, {class: 'conteiner__datebox--machinenumberbox--machineno',id:'machine_number'}
+            .conteiner__datebox--machinenumberbox
+              .conteiner__datebox--machinenumberbox--machinenumber
+                稼働時間　：
+              = f.select :operating_time, Dated.operating_times.keys.to_a,{prompt: "---"}, {class: 'conteiner__datebox--machinenumberbox--machineno',id:'operating_time'}
+            = f.fields_for :date_products, @dated.date_products.build do |i|
+              .space
+              .box01
+                .productsnumberbox
+                  .productsnumberbox--productsname
+                    製品番号　：
+                  .productsnumberbox--productsname
+                    溶接不良数：
+                  .productsnumberbox--productsname
+                    廃棄数　　：
+                  .productsnumberbox--productsname
+                    生産者　　：
+                  .productsnumberbox--productsname
+                    生産者　　：
+                .productsnumberbox02
+                  = i.collection_select :product_no, Product.all,:id,:product_no,{prompt: "---"}, {class: "productnumber"}
+                  = i.number_field :number_of_production, {placeholder:" 個数", class: "numbernumernumer"}
+                  .conteinertexttext
+                    個
+                  = i.number_field :defective, {placeholder:" 今日の溶接不良数です。", class: "numbeproduction"}
+                  .conteinertexttextb
+                    個
+                  = i.number_field :waste, {placeholder:" 今日の廃棄品数です。", class: "numbeproduction2"}
+                  .conteinertexttextc
+                    個
+                  = i.collection_select :producer, User.all,:id,:name,{prompt: "---"},{class:'producer001'}
+                  = i.collection_select :producer02, User.all,:id,:name,{prompt: "---"},{class:'producer002'}
+              .links
+                = link_to_add_association "製品を追加", f, :date_products, partial: "date_products_fields"
+            .space
+            .conteiner__datebox--tsnumberbox
+              .conteiner__datebox--tsnumberbox--texttexttext
+                総数　　　：
+              = f.number_field :total_production, {placeholder:" 今日の総生産です。", class: "conteiner__datebox--tsnumberbox--numbeproduction",id:"total_production"}
+              .conteiner__datebox--tsnumberbox--numbeproducti
+                個
+            .textbox
+              .textbox__memobox
+                メモ
+              = f.text_area :description, {placeholder:"例>>今日の10310②は合計500個の内200個なので、明日残りの300個から", class: "textbox__memoboxbox",id:"description"}
+              = f.submit  "送信",class: "buttom"
+        .toppagereturn
+          = link_to root_path do
+            .toppagereturn__toppagereturntext
+              TOPページに戻る
+      = render partial: 'tops/footer'
