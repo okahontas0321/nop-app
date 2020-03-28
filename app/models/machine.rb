@@ -1,10 +1,4 @@
 class Machine < ApplicationRecord
-  has_many :machine_users
-  has_many :users, through: :machine_users
-  has_many :products
-
+  has_many :dateds
   validates :name, presence: true, uniqueness: true
-  
-
-  
 end
